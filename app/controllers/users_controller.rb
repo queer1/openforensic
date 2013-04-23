@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:success] = "Welcome to OpenForensic...Join an Investigation"
+      sign_in @user
+      flash[:success] = "Welcome to Authentication App..."
       redirect_to @user
     else
       render 'new'
