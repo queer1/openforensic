@@ -5,17 +5,35 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    
+    <%= render 'layouts/shim' %>
   </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
+  
+  
+  
+  <body class="pull_top">
+  
+    
+    <% if params[:controller] == 'index' %>
+  
+      <%= render 'layouts/indexheader' %>
+    
+    <% else %>
+    
+      <%= render 'layouts/header' %>
+      
+    <% end %>
+    
+
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
+      
       <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
-    </div>
+      
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
+    
   </body>
 </html>

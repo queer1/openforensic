@@ -6,7 +6,7 @@ gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails', "~> 2.4"
+  gem 'rspec-rails'
 end
 
 # Gems used only for assets and not required
@@ -22,6 +22,9 @@ gem 'jquery-rails'
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
+  
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
 end
 
 group :production do

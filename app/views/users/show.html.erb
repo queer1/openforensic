@@ -1,11 +1,158 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= image_tag "producer.jpg" %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-</div>
+
+<div id="blog_post">
+  <div class="container">
+    
+      <div class="row-fluid">
+        
+          <!-- SideBar -->
+          <div class="span3 sidebar">
+              <div class="box">
+                  <div class="sidebar_header">
+                      <%= image_tag "producer.jpg", :class => "profile" %>
+                      <h4><%= @user.name %></h4>
+                  </div>
+
+                  <ul class="sidebar_menu">
+                      <ul>
+                          <li><a href="#">Overview</a></li>
+                          <li><a href="#">My Recent Activity</a></li>
+                          <li><a href="#">My Cases</a></li>
+                          <li><a href="#">Theories</a></li>
+                          <li><a href="#">Cross Examinations</a></li>
+                          <li><a href="#">My Evidence</a></li>
+                          <li><%= link_to "Account Settings", edit_user_path %></li>
+                      </ul>
+                  </ul>
+              </div>
+            
+              <div class="box box2">
+                  <div class="sidebar_header">
+                      <h4>Recent Posts</h4>
+                  </div>
+
+                  <div class="recent">
+                      <span>
+                          <img src="img/recent_photos.jpg" alt="">
+                      </span>
+                      <p>There are many  embarrassing hidden in the middle of text.</p>
+                  </div>
+                  <div class="recent">
+                      <span>
+                          <img src="img/recent_photos.jpg" alt="">
+                      </span>
+                      <p>There are many  embarrassing hidden in the middle of text.</p>
+                  </div>
+              </div>
+
+              <div class="box">
+                  <div class="sidebar_header">
+                      <h4>Popular photos</h4>
+                  </div>
+                  <ul class="recent_photos">
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                      <li>
+                          <a href="#"><img src="img/recent_photos.jpg"></a></li>
+                  </ul>
+              </div>
+
+              <div class="box last">
+                  <div class="sidebar_header">
+                      <h4>Archives</h4>
+                  </div>
+
+                  <ul class="sidebar_menu">
+                      <ul>
+                          <li><a href="#">January 2012</a></li>
+                          <li><a href="#">May 2012</a></li>
+                          <li><a href="#">August 2011</a></li>
+                          <li><a href="#">October 2011</a></li>
+                      </ul>
+                  </ul>
+              </div>
+          </div><!-- end sidebar -->
+        
+          <div class="span8 offset1">
+            
+              <div class="section_header">
+                  <h3>My Cases</h3>
+
+                  <input type="text" class="input-large search-query" placeholder="Search">
+              </div>
+
+              <div class="post_content">
+                  <h2><a href="#">United States vs Dzhokhar Tsarnaev</a></h2>
+                  <p>
+                      There are many variations of passages of Lorem Ipsum available, injected generators on the  embarrassing hidden in the middle all the dictionary...
+                      <span class="date">Wed, 12 Dec.</span>
+                  </p>
+                  <a href="#">View Case Profile</a> | <a href="#">Submit Evidence</a>
+              </div>
+              
+              <div class="post_content">
+                  <h2><a href="#">State of California vs George Zimmerman</a></h2>
+                  <p>
+                      There are many variations of passages of Lorem Ipsum available, injected generators on the  embarrassing hidden in the middle all the dictionary...
+                      <span class="date">Wed, 12 Dec.</span>
+                  </p>
+                  <a href="#">View Case Profile</a> | <a href="#">Submit Evidence</a>
+              </div>
+              
+              <div class="post_content">
+                  <h2><a href="#">United States vs Dzhokhar Tsarnaev</a></h2>
+                  <p>
+                      There are many variations of passages of Lorem Ipsum available, injected generators on the  embarrassing hidden in the middle all the dictionary...
+                      <span class="date">Wed, 12 Dec.</span>
+                  </p>
+                  <a href="#">View Case Profile</a> | <a href="#">Submit Evidence</a>
+              </div>
+              
+              <div class="post_content">
+                  <h2><a href="#">United States vs Dzhokhar Tsarnaev</a></h2>
+                  <p>
+                      There are many variations of passages of Lorem Ipsum available, injected generators on the  embarrassing hidden in the middle all the dictionary...
+                      <span class="date">Wed, 12 Dec.</span>
+                  </p>
+                  <a href="#">View Case Profile</a> | <a href="#">Submit Evidence</a>
+              </div>
+              
+              <div class="post_content">
+                  <h2><a href="#">State of California vs George Zimmerman</a></h2>
+                  <p>
+                      There are many variations of passages of Lorem Ipsum available, injected generators on the  embarrassing hidden in the middle all the dictionary...
+                      <span class="date">Wed, 12 Dec.</span>
+                  </p>
+                  <a href="#">View Case Profile</a> | <a href="#">Submit Evidence</a>
+              </div>
+              
+              <div class="post_content">
+                  <h2><a href="#">United States vs Dzhokhar Tsarnaev</a></h2>
+                  <p>
+                      There are many variations of passages of Lorem Ipsum available, injected generators on the  embarrassing hidden in the middle all the dictionary...
+                      <span class="date">Wed, 12 Dec.</span>
+                  </p>
+                  <a href="#">View Case Profile</a> | <a href="#">Submit Evidence</a>
+              </div>
+
+              
+          </div><!-- end main profile section -->
+        
+      </div><!-- end Row -->
+    
+  </div><!-- end Container -->
+</div><!-- end blog_post -->

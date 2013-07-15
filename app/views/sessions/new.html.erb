@@ -1,19 +1,78 @@
-<% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
+<!-- Sign In -->
+<div id="sign_in2">
+    <div class="container">
+        <div class="section_header">
+            <!--<h3>Sign in</h3>-->
+        </div>
+        <div class="row login">
+            <div class="span5 left_box">
+                <h4>Sign in to your account</h4>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
+                <div class="perk_box">
+                    <div class="perk">
+                        <span class="icos ico1"></span>
+                        <p><strong>Follow</strong> any legal case, past or present</p>
+                    </div>
+                    <div class="perk">
+                        <span class="icos ico2"></span>
+                        <p><strong>Contribute</strong> to case by examining the evidence</p>
+                    </div>
+                    <div class="perk">
+                        <span class="icos ico3"></span>
+                        <p><strong>Submit</strong> new theories and argruments</p>
+                    </div>
+                </div>
+            </div>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+            <div class="span6 signin_box">
+                <div class="box">
+                    <div class="box_cont">
+                        <div class="social">
+                            <a href="#" class="circle facebook">
+                              <%= image_tag("face.png", :alt => "facebook-login") %>
+                            </a>
+                             <a href="#" class="circle twitter">
+                              <%= image_tag("twt.png", :alt => "twitter-login") %>
+                            </a>
+                             <a href="#" class="circle gplus">
+                                <%= image_tag("gplus.png", :alt => "google-login") %>
+                            </a>
+                        </div>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+                        <div class="division">
+                            <div class="line l"></div>
+                            <span>or</span>
+                            <div class="line r"></div>
+                        </div>
+                        
+                        <% provide(:title, "Sign in") %>
+                        
+                        <div class="row">
+                          <div class="form">
+                            <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-    <% end %>
+                              <%= f.label :email %>
+                              <%= f.text_field :email %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-  </div>
-</div>
+                              <%= f.label :password %>
+                              <%= f.password_field :password %>
+                              
+                              <%= f.submit "Sign in", class: "submit" %>
+                            <% end %>
+                            <br/>
+                            <div class="forgot">
+                                <span>Don’t have an account?</span>
+                                <p><%= link_to "Sign up now!", signup_path %></p>
+                            </div>
+
+                          </div>
+                        </div> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
+<script src="js/theme.js"></script>

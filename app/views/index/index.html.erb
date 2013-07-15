@@ -1,0 +1,328 @@
+<div class="row-fluid">
+
+  <section id="feature_slider" class="">
+      <!-- 
+          Each slide is composed by <img> and .info
+          - .info's position is customized with css in index.css
+          - each <img> parallax effect is declared by the following params inside its class:
+        
+          example: class="asset left-472 sp600 t120 z3"
+          left-472 means left: -472px from the center
+          sp600 is speed transition
+          t120 is top to 120px
+          z3 is z-index to 3
+          Note: Maintain this order of params
+
+          For the backgrounds, you can combine from the bgs folder :D
+      -->
+    
+      <article class="slide" id="responsive">
+          <%= image_tag("suspect.png", :alt => "suspect", :class => "asset left-472 sp600 t120 z3") %>
+          <%= image_tag("blank.png", :alt => "blank", :class => "asset left-472 sp600 t120 z3") %>
+          <div class="info">
+              <h2 class="trans">
+                  Examine <strong>all</strong><br/>
+                  the Evidence...
+              </h2>                
+          </div>
+      </article>
+    
+      <article class="slide" id="showcasing">
+        <!--
+          <img class="asset left-30 sp600 t120 z1" src="img/slides/scene1/macbook.png" />
+        -->
+          <div class="info">
+              <h2 class="trans">Follow <strong>all</strong> the<br/>courtroom drama...</h2>
+          </div>
+      </article>
+      <!--
+      <article class="slide" id="ideas" style="background: url('img/backgrounds/aqua.jpg') repeat-x top center;">
+          <div class="info">
+              <h2>At OpenForensic, every citizen is an investigator</h2>
+          </div>
+          <img class="asset left-480 sp600 t260 z1" src="img/slides/scene2/left.png" />
+          <img class="asset left-210 sp600 t213 z2" src="img/slides/scene2/middle.png" />
+          <img class="asset left60 sp600 t260 z1" src="img/slides/scene2/right.png" />
+      </article>
+      <article class="slide" id="tour" style="background: url('img/backgrounds/color-splash.jpg') repeat-x top center;">
+          <img class="asset left-472 sp650 t210 z3" src="img/slides/scene3/ipad.png" />
+          <img class="asset left-365 sp600 t270 z4" src="img/slides/scene3/iphone.png" />
+          <img class="asset left-350 sp450 t135 z2" src="img/slides/scene3/desktop.png" />
+          <img class="asset left-185 sp550 t220 z1" src="img/slides/scene3/macbook.png" />
+          <div class="info">
+              <h2>Contribute to Investigative History</h2>
+              <a href="features.html">Follow or Start a Case</a>
+          </div>
+      </article>
+      -->       
+  </section>
+
+
+    <div id="showcase">
+        <div class="container">
+            <div class="section_header">
+                <h3>Popular Cases...</h3>
+            </div>            
+            <div class="row-fluid feature_wrapper">
+                <!-- Features Row -->
+                <div class="features_op1_row">
+                    <!-- Feature -->
+                    <div class="span4 feature first">
+                        <div class="img_box">
+                            <a href="services.html">
+                               <%= image_tag("dzhok.jpg", :alt => "case-example") %>
+                                <span class="circle"> 
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>United States vs Dzhokhar Tsarnaev</h6>
+                            <p>
+                                There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature -->
+                    <div class="span4 feature">
+                        <div class="img_box">
+                            <a href="services.html">
+                              <%= image_tag("zimmerman.jpg", :alt => "case-example") %>
+                                <span class="circle"> 
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>State of California vs George Zimmerman</h6>
+                            <p>
+                                There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature -->
+                    <div class="span4 feature last">
+                        <div class="img_box">
+                            <a href="services.html">
+                                <%= image_tag("service1.png", :alt => "case-example") %>
+                                <span class="circle"> 
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>U.S. Attorney's Office vs Jim Doe</h6>
+                            <p>
+                                There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div id="features">
+        <div class="container">
+            <div class="section_header">
+                <h3>Features</h3>
+            </div> 
+            <div class="row feature">
+                <div class="span6">
+                    <img src="img/showcase1.png" />
+                </div>
+                <div class="span6 info">
+                    <h3>
+                        <img src="img/features-ico1.png" />
+                        Beautiful on all devices
+                    </h3>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    </p>
+                </div>
+            </div>
+            <div class="row feature ss">
+                <div class="span6 info">
+                    <h3>
+                        <img src="img/features-ico2.png" />
+                        Blog page included
+                    </h3>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    </p>
+                </div>
+                <div class="span6">
+                    <img src="img/showcase2.png" class="pull-right" />
+                </div>
+            </div>
+            <div class="row feature ss">
+                <div class="span6">
+                    <img src="img/showcase3.png" />
+                </div>
+                <div class="span6 info">
+                    <h3>
+                        <img src="img/features-ico3.png" />
+                        Simple and clean coming soon page
+                    </h3>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <!-- Pricing Option -->
+
+    <div id="in_pricing">
+        <div class="container">
+          <!--
+            <div class="section_header">
+                <h3>Pricing</h3>
+            </div>
+
+            <div class="row charts_wrapp">
+            
+                <div class="span4">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <h3>Lite</h3>
+                            <div class="price">
+                                <span class="dollar">$</span> 
+                                <span class="qty">35</span> 
+                                <span class="month">/month</span>
+                            </div>
+                            <div class="features">
+                                <p>
+                                    <strong>10</strong>
+                                    Shared Projects
+                                </p>
+                                <p>
+                                    <strong>4</strong>
+                                    Team Members
+                                </p>
+                                <p>
+                                    <strong>10</strong>
+                                    Storage
+                                </p>
+                            </div>
+                            <a class="order" href="pricing.html">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="span4 pro">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <img class="ribbon" src="img/badge.png">
+                            <h3>Pro</h3>
+                            <div class="price">
+                                <span class="dollar">$</span> 
+                                <span class="qty">99</span> 
+                                <span class="month">/month</span>
+                            </div>
+                            <div class="features">
+                                <p>
+                                    <strong>10</strong>
+                                    Shared Projects
+                                </p>
+                                <p>
+                                    <strong>25</strong>
+                                    Team Members
+                                </p>
+                                <p>
+                                    <strong>Unlimited</strong>
+                                     Storage
+                                </p>
+                                <p>
+                                    <strong>Plus </strong>
+                                    Phone Support
+                                </p>
+                            </div>
+                            <a class="order" href="pricing.html">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+           
+                <div class="span4 standar">
+                    <div class="plan">
+                        <div class="wrapper">
+                            <h3>Standard</h3>
+                            <div class="price">
+                                <span class="dollar">$</span> 
+                                <span class="qty">65</span> 
+                                <span class="month">/month</span>
+                            </div>
+                            <div class="features">
+                                <p>
+                                    <strong>10</strong>
+                                    Shared Projects
+                                </p>
+                                <p>
+                                    <strong>4</strong>
+                                    Team Members
+                                </p>
+                                <p>
+                                    <strong>10</strong>
+                                    Storage
+                                </p>
+                            </div>
+                            <a class="order" href="pricing.html">ORDER NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          -->
+          <br/><br/>
+            <div class="start">
+                <p>Search other cases on OpenForensic</p>
+                <a href="pricing.html">View All</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="clients">
+        <div class="container">
+            <div class="section_header">
+                <h3>Backstory...</h3>
+            </div>
+            <div class="row-fluid">
+              <p>In the days following the Boston Marathon Bombings on April 15, 2013, police asked the citizens of Boston for assistance in gathering evidence from the crime scene.  What resulted was an outpouring of evidence in the form of photographs, video, and eyewitness testimony...This forensic data was instrumental for law enforcement being able to identify the suspects and ultimately bring them to justice.  At the time, the mainstream media attacked the idea of crowdsourcing evidence from thousands of people across the internet...We at OpenForensic believed we were witnessing a revolution in the field of forensic science.</p>
+              <div class="start">
+                  <a href="pricing.html">Learn more</a>
+              </div>
+            </div>
+        </div>
+    </div>
+  
+    <div id="clients">
+        <div class="container">
+            <div class="section_header">
+                <h3>As seen on...</h3>
+            </div>
+            <div class="row-fluid">
+                <div class="span2 client">
+                    <div class="img client1"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client2"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client3"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client1"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client2"></div>
+                </div>
+                <div class="span2 client">
+                    <div class="img client3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
