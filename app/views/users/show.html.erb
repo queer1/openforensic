@@ -9,7 +9,7 @@
           <div class="span3 sidebar">
               <div class="box">
                   <div class="sidebar_header">
-                      <%= image_tag "producer.jpg", :class => "profile" %>
+                      <%= image_tag @user.image_url.to_s, :class => "profile" %>
                       <h4><%= @user.name %></h4>
                   </div>
 
@@ -26,6 +26,7 @@
                   </ul>
               </div>
             
+            <!--
               <div class="box box2">
                   <div class="sidebar_header">
                       <h4>Recent Posts</h4>
@@ -44,6 +45,7 @@
                       <p>There are many  embarrassing hidden in the middle of text.</p>
                   </div>
               </div>
+            -->
 
               <div class="box">
                   <div class="sidebar_header">

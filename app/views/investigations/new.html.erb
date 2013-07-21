@@ -1,0 +1,22 @@
+<% provide(:title, 'New Investigation') %>
+<h1>Start a New Investigation</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @investigation, :html => {:multipart => true} do |f| %>
+    
+      <%= render 'shared/error_messages', object: f.object %>
+    
+      <%= f.label :Title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :Description %>
+      <%= f.text_area :content %>
+      
+      <%= f.label :Image %>
+      <%= f.file_field :investigationimage %>
+
+      <%= f.submit "Create this Investigation", class: "btn btn-large btn-info" %>
+    <% end %>
+  </div>
+</div>

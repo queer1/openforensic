@@ -1,13 +1,71 @@
-<footer class="footer">
-  <small>
-    <a href="http://railstutorial.org/">Rails Tutorial</a>
-    by Michael Hartl
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-      <li><a href="http://news.railstutorial.org/">News</a></li>
-    </ul>
-  </nav>
+<!-- starts footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid sections">
+            <div class="span4 recent_posts">
+                <h3 class="footer_header">
+                    About OpenForensic
+                </h3>
+                <div class="post">
+                    <a href="blogpost.html">
+                        <img src="img/recent_post1.png" class="img-circle" />
+                    </a>
+                    <div class="date">
+                        Wed, 12 Dec
+                    </div>
+                    <a href="blogpost.html" class="title">
+                        Randomised words which don't look embarrasing hidden.
+                    </a>
+                </div>
+                <div class="post">
+                    <a href="blogpost.html">
+                        <img src="img/recent_post2.png" class="img-circle" />
+                    </a>
+                    <div class="date">
+                        Mon, 12 Dec
+                    </div>
+                    <a href="blogpost.html" class="title">
+                        Randomised words which don't look embarrasing hidden.
+                    </a>
+                </div>
+            </div>
+            
+            <div class="span4 offset2 contact">
+                <h3 class="footer_header">
+                    Contact
+                </h3>
+                <form action="#" method="post">
+                    <input type="text" placeholder="Your name" />
+                    <input type="text" placeholder="Your email" />
+                    <textarea rows="3" placeholder="Message"></textarea>
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+        </div>
+        <div class="row credits">
+            <div class="span12">
+                <div class="row social">
+                    <div class="span12">
+                        <a href="#" class="facebook">
+                            <span class="socialicons ico1"></span>
+                            <span class="socialicons_h ico1h"></span>
+                        </a>
+                        <a href="#" class="twitter">
+                            <span class="socialicons ico2"></span>
+                            <span class="socialicons_h ico2h"></span>
+                        </a>
+                        <a href="#" class="gplus">
+                            <span class="socialicons ico3"></span>
+                            <span class="socialicons_h ico3h"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row copyright">
+                    <div class="span12">
+                        © OpenForensic LLC
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
 </footer>

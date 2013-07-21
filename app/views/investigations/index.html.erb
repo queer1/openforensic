@@ -1,0 +1,19 @@
+<% provide(:title, 'Search Investigations') %>
+
+<div class="row-fluid">
+  <h3>Investigations</h3>
+    
+    <ul class="investigations">
+      <% @investigations.each do |investigation| %>
+      <li>
+        
+        <%= link_to (image_tag investigation.investigationimage_url.to_s), investigation %>
+        <%= link_to investigation.title, investigation %>
+        
+      </li>
+      <% end %>
+      
+    </ul>
+    
+    <%= will_paginate @investigations %>
+</div>
