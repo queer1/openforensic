@@ -1,15 +1,8 @@
-html {
-	margin: 0;
-}
 body {
-	position: relative;
 	background: #DDDCE2 url(body_bg.jpg) repeat left top;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Lato', sans-serif !important;
 	padding-top: 107px;
-}
-@media (max-width: 979px) {
-	body { padding-top: 0 !important; }
 }
 a:hover {
 	text-decoration: none;
@@ -395,6 +388,7 @@ header {
 		opacity: 0.7;
 	}
 }
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) { 
 	.navbar.transparent.navbar-fixed-top, 
@@ -457,7 +451,3 @@ header {
 @media (max-width: 480px) {
 
 }
-
-/* Icons
--------------------------------------------------- */
-

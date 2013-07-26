@@ -1,0 +1,9 @@
+<% @investigation %>
+<div class="stats">
+  <a href="<%= followers_investigation_path(@investigation) %>">
+    <strong id="followers" class="stat">
+      <%= @investigation.followers.count %>
+    </strong>
+    Investigating
+  </a>
+</div>

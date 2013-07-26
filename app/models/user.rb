@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base 
+  has_many :investigations, dependent: :destroy
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_investigations, through: :relationships, source: :followed
+  
   attr_accessible :name, :email, :password, :password_confirmation, :image
   mount_uploader :image, ImageUploader
   has_secure_password
@@ -13,6 +17,18 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+  
+  def following?(some_investigation)
+    relationships.find_by_followed_id(some_investigation.id)
+  end
+  
+  def follow!(some_investigation)
+    self.relationships.create!(followed_id: some_investigation.id)
+  end
+  
+  def unfollow!(some_investigation)
+    relationships.find_by_followed_id(some_investigation.id).destroy
+  end
   
   private
 

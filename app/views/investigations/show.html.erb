@@ -1,4 +1,4 @@
-<% provide(:title, @investigation) %>
+<% provide(:title, @investigation.title) %>
     
 <div class="row-fluid">
   
@@ -6,6 +6,8 @@
       <div class="container">
           <div class="section_header">
               <h3><%= @investigation.title %></h3>
+              <%= render 'shared/investigationstats' %>
+              <%= render 'follow_form' if signed_in? %>
           </div>
           <div class="row-fluid">
               <div class="span6 intro">
@@ -35,7 +37,7 @@
   <div id="team">
       <div class="container">
           <div class="section_header">
-              <h3>Persons of Interest</h3>
+              <h3>Persons of Interest & Key Players</h3>
           </div>
 
           <div class="row people">
@@ -142,15 +144,62 @@
       </div>
   </div>
 
+<div class="container">
+  <p  style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">   <a title="View NDAA Bill on Scribd" href="http://www.scribd.com/doc/107135324/ndaa-bill"  style="text-decoration: underline;" >NDAA Bill</a> by <a title="View David Walker's profile on Scribd" href="http://www.scribd.com/dwalker_140991"  style="text-decoration: underline;" >David Walker</a></p><iframe class="scribd_iframe_embed" src="http://www.scribd.com/embeds/107135324/content?start_page=1&view_mode=scroll&access_key=key-1ah43s6ovh96exjiqd39&show_recommendations=true" data-auto-height="false" data-aspect-ratio="0.772727272727273" scrolling="no" id="doc_49769" width="600" height="800" frameborder="0"></iframe>
+</div>
+
   <div id="process">
       <div class="container">
           <div class="section_header">
-              <h3>Our Process</h3>
+              <h3>Top Evidence</h3>
           </div>
           <div class="row services_circles">
               <div class="span4 description">
                   <div class="text active">
-                      <h4>Plan what you need.</h4>
+                      <h4>View the Evidence Room</h4>
+                      <p>
+                          There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
+                  </div>
+                  <div class="text">
+                      <h4>Develop your product or service.</h4>
+                      <p>
+                          There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to 
+                          making this the first true generator  Internet.</p>
+                  </div>
+                  <div class="text">
+                      <h4>Design this theme to your needs.</h4>
+                      <p>
+                          There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
+                  </div>
+              </div>
+
+              <div class="span7 areas">
+                  <div class="circle active">
+                      <img src="img/plan.png" />
+                      <span>View</span>
+                  </div>
+                  <div class="circle">
+                      <img src="img/develop.png" />
+                      <span>Evidence</span>
+                  </div>
+                  <div class="circle last_circle">
+                      <img src="img/design.png" />
+                      <span>Room</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div id="process">
+      <div class="container">
+          <div class="section_header">
+              <h3>Theories</h3>
+          </div>
+          <div class="row services_circles">
+              <div class="span4 description">
+                  <div class="text active">
+                      <h4>View the Evidence Room</h4>
                       <p>
                           There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
                   </div>

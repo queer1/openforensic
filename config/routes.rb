@@ -1,7 +1,20 @@
 Openforensic::Application.routes.draw do
-  resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :investigations
+  
+  resources :users do
+    member do
+      get :following
+    end
+  end
+  
+  resources :investigations do
+    member do
+      get :followers
+    end
+  end
+  
+  resources :relationships, only: [:create, :destroy]
   
   root to: 'index#index'
 

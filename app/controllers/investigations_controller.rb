@@ -1,5 +1,5 @@
 class InvestigationsController < ApplicationController
-  before_filter :signed_in_user, only: [:create, :new, :edit, :update]
+  before_filter :signed_in_user, only: [:create, :new, :edit, :update, :followers]
   
   def new
     @investigation = Investigation.new
@@ -42,5 +42,12 @@ class InvestigationsController < ApplicationController
     flash[:success] = "Investigation destroyed"
     redirect_to users_path
   end
+  
+  def followers
+      @title = "Following this Investigation"
+      @investigation = Investigation.find(params[:id])
+      @investigations = @investigation.followers.paginate(page: params[:page])
+      render 'show_follow_investigation'
+    end
   
 end

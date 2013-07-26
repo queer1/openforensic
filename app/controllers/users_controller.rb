@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :signed_in_user, only: [:edit, :update, :destroy, :following]
   before_filter :correct_user,   only: [:edit, :update]
 
   
@@ -41,6 +41,13 @@ class UsersController < ApplicationController
     User.find(params[:id]).destroy
     flash[:success] = "User destroyed"
     redirect_to users_path
+  end
+  
+  def following
+    @title = "My Investigations"
+    @user = User.find(params[:id])
+    @investigations = @user.followed_investigations.paginate(page: params[:page])
+    render 'show_follow'
   end
   
   private

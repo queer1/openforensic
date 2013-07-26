@@ -1,0 +1,37 @@
+<% provide(:title, @investigation.title) %>
+
+<div class="row-fluid">
+
+  <div class="aboutus">
+    <div class="container">
+      
+      <div class="section_header">
+          <h3><% provide(:title, @investigation.title) %></h3>
+
+          <input type="text" class="input-large search-query" placeholder="Search">
+      </div>
+    
+      <% if @investigation.followers.any? %>
+          <% @investigation.followers.each do |user| %>
+            <div class="post_content">
+            <h2><%= link_to user.name, user %></h2>
+            </div>
+          <% end %>
+          <%= will_paginate @users %>
+      <% end %>
+
+<!-- USE THESE STYLES WHEN YOU FIGURE THIS SHIZ OUT
+      <div class="post_content">
+          <h2><a href="#">United States vs Dzhokhar Tsarnaev</a></h2>
+          <p>
+              There are many variations of passages of Lorem Ipsum available, injected generators on the  embarrassing hidden in the middle all the dictionary...
+              <span class="date">Wed, 12 Dec.</span>
+          </p>
+          <a href="#">View Case Profile</a> | <a href="#">Submit Evidence</a>
+      </div>
+-->
+  
+    </div><!-- end Container -->
+  </div><!-- end AboutUs -->
+  
+</div><!-- end Row Fluid -->
