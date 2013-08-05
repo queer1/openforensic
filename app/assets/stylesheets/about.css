@@ -42,7 +42,7 @@
 	margin-bottom: 90px;
 }
 #team .section_header{
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 }
 #team .section_header h3{
 	color: #9D9D9E;
@@ -62,14 +62,13 @@
 	float: right;
 }
 #team .people .bio_box img{
-	float: left;
+
 }
 #team .people .bio_boxr img{
 	margin-left: 38px;
 }
 #team .people .bio_box .info{
-	float: left;
-	margin: 38px 0 0 30px;
+	margin: 0px 0 0 0px;
 }
 #team .people .bio_box .info p{
 	margin-bottom: 0;

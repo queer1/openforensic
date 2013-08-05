@@ -102,6 +102,15 @@ header {
 	margin:0;
 }
 
+img.player {
+	-moz-border-radius: 75px;
+	-webkit-border-radius: 75px;
+	border-radius: 75px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	width: auto;
+	height: 100px;
+}
+
 /* Footer
 -------------------------------------------------- */
 #footer {

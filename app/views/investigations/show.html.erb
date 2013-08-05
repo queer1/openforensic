@@ -8,6 +8,7 @@
               <h3><%= @investigation.title %></h3>
               <%= render 'shared/investigationstats' %>
               <%= render 'follow_form' if signed_in? %>
+              <%= link_to "Add a Person of Interest", new_investigation_player_path(@investigation.id), :class => "btn btn-info" %>
           </div>
           <div class="row-fluid">
               <div class="span6 intro">
@@ -37,115 +38,36 @@
   <div id="team">
       <div class="container">
           <div class="section_header">
-              <h3>Persons of Interest & Key Players</h3>
+              <h3>Persons of Interest</h3>
           </div>
 
           <div class="row people">
-              <div class="row row1">
-                  <div class="span6 bio_box">
-                      <img src="img/ale.png" alt="">
-                      <div class="info">
-                          <p class="name">Alejandra Galvan Castillo</p>
-                          <p class="area">Creative Director</p>
-                          <a href="#" class="facebook">
-                              <span class="socialicons ico1"></span>
-                              <span class="socialicons_h ico1h"></span>
-                          </a>
-                          <a href="#" class="twitter">
-                              <span class="socialicons ico2"></span>
-                              <span class="socialicons_h ico2h"></span>
-                          </a>
-                          <a href="#" class="flickr">
-                              <span class="socialicons ico4"></span>
-                              <span class="socialicons_h ico4h"></span>
-                          </a>
-                          <a href="#" class="dribble">
-                              <span class="socialicons ico6"></span>
-                              <span class="socialicons_h ico6h"></span>
-                          </a>
-                      </div>
-                  </div>
+              <div class="row-fluid row1">
+                
+                <% @investigation.players.each do |player| %>
+                
+                  <div class="span3 bio_box">
+                    
 
-                  <div class="span6 bio_box bio_boxr">
-                      <img src="img/ale.png" alt="">
+                      <%= image_tag player.playerimage_url.to_s, :class => :player %>
                       <div class="info">
-                          <p class="name">Alejandra Galvan Castillo</p>
-                          <p class="area">Creative Director</p>
-                          <a href="#" class="facebook">
-                              <span class="socialicons ico1"></span>
-                              <span class="socialicons_h ico1h"></span>
-                          </a>
-                          <a href="#" class="twitter">
-                              <span class="socialicons ico2"></span>
-                              <span class="socialicons_h ico2h"></span>
-                          </a>
-                          <a href="#" class="flickr">
-                              <span class="socialicons ico4"></span>
-                              <span class="socialicons_h ico4h"></span>
-                          </a>
-                          <a href="#" class="dribble">
-                              <span class="socialicons ico6"></span>
-                              <span class="socialicons_h ico6h"></span>
-                          </a>
+                          <p class="name"><%= player.name %></p>
+                          <p class="area">Suspect</p>
                       </div>
+                    
+
                   </div>
+                  
+                <% end %>
+ 
               </div>
-
-              <div class="row row1">
-                  <div class="span6 bio_box">
-                      <img src="img/ale.png" alt="">
-                      <div class="info">
-                          <p class="name">Alejandra Galvan Castillo</p>
-                          <p class="area">Creative Director</p>
-                          <a href="#" class="facebook">
-                              <span class="socialicons ico1"></span>
-                              <span class="socialicons_h ico1h"></span>
-                          </a>
-                          <a href="#" class="twitter">
-                              <span class="socialicons ico2"></span>
-                              <span class="socialicons_h ico2h"></span>
-                          </a>
-                          <a href="#" class="flickr">
-                              <span class="socialicons ico4"></span>
-                              <span class="socialicons_h ico4h"></span>
-                          </a>
-                          <a href="#" class="dribble">
-                              <span class="socialicons ico6"></span>
-                              <span class="socialicons_h ico6h"></span>
-                          </a>
-                      </div>
-                  </div>
-
-                  <div class="span6 bio_box bio_boxr">
-                      <img src="img/ale.png" alt="">
-                      <div class="info">
-                          <p class="name">Alejandra Galvan Castillo</p>
-                          <p class="area">Creative Director</p>
-                          <a href="#" class="facebook">
-                              <span class="socialicons ico1"></span>
-                              <span class="socialicons_h ico1h"></span>
-                          </a>
-                          <a href="#" class="twitter">
-                              <span class="socialicons ico2"></span>
-                              <span class="socialicons_h ico2h"></span>
-                          </a>
-                          <a href="#" class="flickr">
-                              <span class="socialicons ico4"></span>
-                              <span class="socialicons_h ico4h"></span>
-                          </a>
-                          <a href="#" class="dribble">
-                              <span class="socialicons ico6"></span>
-                              <span class="socialicons_h ico6h"></span>
-                          </a>
-                      </div>
-                  </div>
-              </div>
+              
           </div>
       </div>
   </div>
 
 <div class="container">
-  <p  style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">   <a title="View NDAA Bill on Scribd" href="http://www.scribd.com/doc/107135324/ndaa-bill"  style="text-decoration: underline;" >NDAA Bill</a> by <a title="View David Walker's profile on Scribd" href="http://www.scribd.com/dwalker_140991"  style="text-decoration: underline;" >David Walker</a></p><iframe class="scribd_iframe_embed" src="http://www.scribd.com/embeds/107135324/content?start_page=1&view_mode=scroll&access_key=key-1ah43s6ovh96exjiqd39&show_recommendations=true" data-auto-height="false" data-aspect-ratio="0.772727272727273" scrolling="no" id="doc_49769" width="600" height="800" frameborder="0"></iframe>
+  
 </div>
 
   <div id="process">

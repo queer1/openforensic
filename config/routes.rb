@@ -1,6 +1,9 @@
 Openforensic::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
-  resources :investigations
+  
+  resources :investigations do
+    resources :players
+  end
   
   resources :users do
     member do

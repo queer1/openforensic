@@ -1,0 +1,22 @@
+<% provide(:title, 'New Person of Interest') %>
+<h1>Add a Person of Interest</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @player, :url => investigation_players_path, :html => {:multipart => true} do |f| %>
+    
+      <%= render 'shared/error_messages', object: f.object %>
+    
+      <%= f.label :Name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :Background %>
+      <%= f.text_area :content %>
+      
+      <%= f.label :Image %>
+      <%= f.file_field :playerimage %>
+
+      <%= f.submit "Add this Person of Interest", class: "btn btn-large btn-info" %>
+    <% end %>
+  </div>
+</div>
