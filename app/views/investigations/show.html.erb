@@ -11,7 +11,7 @@
               <%= render 'shared/investigationstats' %>
             </div>
               <%= render 'follow_form' if signed_in? %>
-              <%= link_to "Add a Person of Interest", new_investigation_player_path(@investigation.id), :class => "btn btn-info" %>
+              <%= link_to "Add a Person of Interest", new_investigation_player_path(@investigation.id), :class => "btn btn-info" %><%= link_to "Submit Evidence", new_investigation_exhibit_path(@investigation.id), :class => "btn btn-info" %>
           </div>
           <div class="row-fluid">
               <div class="span6 intro">

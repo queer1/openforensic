@@ -5,6 +5,10 @@ Openforensic::Application.routes.draw do
     resources :players
   end
   
+  resources :investigations do
+    resources :exhibits
+  end
+  
   resources :users do
     member do
       get :following
