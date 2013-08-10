@@ -1,14 +1,27 @@
 #aboutus{
-	margin-bottom: 90px;
-	margin-top: 70px;
+	margin-bottom: 20px;
+	/* margin-top: 70px; */
+	margin-top: 0px;
+}
+#aboutus .container {
+	-moz-box-shadow: 0px 0px 2px #ddd;
+	-webkit-box-shadow: 0px 0px 2px #ddd;
+	box-shadow: 0px 0px 2px #ddd;
+	background-color: #fff;
+}
+#aboutus .container .padd .section_header.cover_art {
+	background: url('/assets/bronco.jpg') no-repeat;
+	height: 300px;
+	-moz-box-shadow: 0px 0px 2px #646464;
+	-webkit-box-shadow: 0px 0px 2px #646464;
+	box-shadow: 0px 0px 2px #646464;
 }
 #aboutus .intro h6{
 	font-size: 21px;
-	font-style: italic;
 	color: #252526;
 	line-height: 29px;
 	font-weight: normal;
-	margin: 0 0 16px 0;
+	margin: 0px 0px 0px 0px;
 }
 #aboutus .intro p{
 	color: #3F3F3F;
@@ -35,11 +48,26 @@
 #aboutus .flex-control-nav{
 	bottom: -30px;
 }
+#aboutus .container .section_header.cover_art h3 {
+	background: url('/assets/transbg-white.jpg') repeat;
+	padding: 20px 20px 10px 0px;
+	margin-top: 160px;
+	margin-bottom: 5px;
+	font-size: 40px;
+}
+#aboutus .container .section_header.cover_art .stats {
+	margin-bottom: 5px;
+}
+#aboutus .container .section_header.cover_art .stats a {
+	background: url('/assets/transbg-white.jpg') repeat;
+	clear: both;
+	padding: 5px 5px 5px 2px;
+}
 #team{
 	padding: 35px 0 25px;
 	margin: 0;
 	background: #252528;
-	margin-bottom: 90px;
+	margin-bottom: 60px;
 }
 #team .section_header{
 	margin-bottom: 30px;
@@ -142,7 +170,7 @@
 	min-height: 350px;
 }
 #process .section_header{
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 }
 #process .section_header h3{
 	margin: 0;
@@ -198,7 +226,33 @@
 	display: block;
 	margin-top: 21px;
 }
+
 #process .areas .circle:hover,
 #process .areas .circle.active {
 	background: rgba(17, 137, 217, 1);
+}
+
+#process .container .row-fluid.services_circles {
+	margin-bottom: 4px;
+	-moz-box-shadow: 0px 0px 2px #ddd;
+	-webkit-box-shadow: 0px 0px 2px #ddd;
+	box-shadow: 0px 0px 2px #ddd;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+	
+}
+
+#process .container .row-fluid.services_circles .media {
+	padding: 10px;
+	background-color: #fff;
+}
+
+#process .container .row-fluid.services_circles .media:hover {
+	background-color: #fff;
+	border-left: 4px solid #2894dc;
+}
+
+#process .container .row-fluid.services_circles .media img {
+	-moz-box-shadow: 0px 0px 2px #646464;
+	-webkit-box-shadow: 0px 0px 2px #646464;
+	box-shadow: 0px 0px 2px #646464;
 }

@@ -4,15 +4,18 @@
   
   <div id="aboutus">
       <div class="container">
-          <div class="section_header">
+        <div class="padd" style="padding: 0px 0px 20px 10px">
+          <div class="section_header cover_art">
+            <div class="whitetitle">
               <h3><%= @investigation.title %></h3>
               <%= render 'shared/investigationstats' %>
+            </div>
               <%= render 'follow_form' if signed_in? %>
               <%= link_to "Add a Person of Interest", new_investigation_player_path(@investigation.id), :class => "btn btn-info" %>
           </div>
           <div class="row-fluid">
               <div class="span6 intro">
-                  <h6>There are many variations of passages Lorem Ipsum available, injected generators on the hidden.</h6>
+                  <h6>Investigation Wiki</h6>
                   <p><%= @investigation.content %></p>
                   <span class="timestamp">
                     Investigation created <%= time_ago_in_words(@investigation.created_at) %> ago.
@@ -32,6 +35,7 @@
                     </ul>
               </div>
           </div>
+        </div>
       </div>
   </div>
 
@@ -73,27 +77,24 @@
   <div id="process">
       <div class="container">
           <div class="section_header">
-              <h3>Top Evidence</h3>
+              <h3>Recently Submitted Evidence</h3>
           </div>
-          <div class="row services_circles">
-              <div class="span4 description">
-                  <div class="text active">
-                      <h4>View the Evidence Room</h4>
-                      <p>
-                          There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
-                  </div>
-                  <div class="text">
-                      <h4>Develop your product or service.</h4>
-                      <p>
-                          There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to 
-                          making this the first true generator  Internet.</p>
-                  </div>
-                  <div class="text">
-                      <h4>Design this theme to your needs.</h4>
-                      <p>
-                          There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
-                  </div>
+          
+          <div class="row-fluid services_circles">
+            
+            <div class="media">
+              <a class="pull-left" href="#">
+                <%= image_tag("marathon.jpg", :class => "media-object", :width => 100) %>
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Suspect Photo Street View</h4>
+                <p>
+                    There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
+
               </div>
+            </div>
+
+            <!-- old code for circles effect
 
               <div class="span7 areas">
                   <div class="circle active">
@@ -109,16 +110,64 @@
                       <span>Room</span>
                   </div>
               </div>
+              
+            -->
+       
           </div>
+          <div class="row-fluid services_circles">
+            
+            <div class="media">
+              <a class="pull-left" href="#">
+                <%= image_tag("marathon.jpg", :class => "media-object", :width => 100) %>
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Suspect Photo Street View</h4>
+                <p>
+                    There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
+
+              </div>
+            </div>          
+          </div>
+          <div class="row-fluid services_circles">
+            
+            <div class="media">
+              <a class="pull-left" href="#">
+                <%= image_tag("marathon.jpg", :class => "media-object", :width => 100) %>
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Suspect Photo Street View</h4>
+                <p>
+                    There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
+
+              </div>
+            </div>          
+          </div>
+          <div class="row-fluid services_circles">
+            
+            <div class="media">
+              <a class="pull-left" href="#">
+                <%= image_tag("marathon.jpg", :class => "media-object", :width => 100) %>
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Suspect Photo Street View</h4>
+                <p>
+                    There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
+
+              </div>
+            </div>          
+          </div>
+          
       </div>
   </div>
+  
+  <br clear="all">
   
   <div id="process">
       <div class="container">
           <div class="section_header">
-              <h3>Theories</h3>
+              <h3>Recently Submitted Theories</h3>
           </div>
-          <div class="row services_circles">
+          <div class="row-fluid services_circles">
               <div class="span4 description">
                   <div class="text active">
                       <h4>View the Evidence Room</h4>
