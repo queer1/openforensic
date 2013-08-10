@@ -5,6 +5,7 @@ class Investigation < ActiveRecord::Base
                                    dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
   has_many :players, dependent: :destroy
+  has_many :exhibits, dependent: :destroy
   
   attr_accessible :title, :content, :investigationimage, :user_id
   validates :title, presence: true, length: { maximum: 140 }
