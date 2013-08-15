@@ -33,6 +33,11 @@
 	margin: 0;
 	border:0 none;
 }
+.flexslider .slides img {
+	-moz-box-shadow: 0px 0px 2px #646464;
+	-webkit-box-shadow: 0px 0px 2px #646464;
+	box-shadow: 0px 0px 2px #646464;
+}
 #aboutus .flex-control-paging li a{
 	background: #666666;
 	box-shadow: none;

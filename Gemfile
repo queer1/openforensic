@@ -7,6 +7,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
 gem 'carrierwave'
+gem 'auto_html'
 
 group :development, :test do
   gem 'sqlite3'
