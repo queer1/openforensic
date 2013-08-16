@@ -6,7 +6,8 @@ class ExhibitsController < ApplicationController
   end
   
   def show
-     @exhibit = Exhibit.find(params[:id])
+    @investigation = Investigation.find(params[:investigation_id])
+    @exhibit = Exhibit.find(params[:id])
   end
   
   def index

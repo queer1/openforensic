@@ -9,7 +9,6 @@
 #blog_post .section_header input[type="text"]{
 	float: right;
 	background: url('../img/search.png') #fff no-repeat 5px;
-	padding-left: 28px;
 	border-radius: 5px;
 }
 #blog_post .post_pic {

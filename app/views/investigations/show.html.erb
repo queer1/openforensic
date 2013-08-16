@@ -53,7 +53,6 @@
                 <% @investigation.players.each do |player| %>
                 
                   <div class="span3 bio_box">
-                    
 
                       <%= image_tag player.playerimage_url.to_s, :class => :player %>
                       <div class="info">
@@ -81,14 +80,12 @@
           <div class="section_header">
               <h3>Recently Submitted Evidence</h3>
           </div>
-          
-          
-            
+
             <% @investigation.exhibits.each do |exhibit| %>
             
             <div class="row-fluid services_circles">
             
-              <%= link_to @exhibit do %>
+              <%= link_to investigation_exhibit_path(@investigation, exhibit) do %>
                 <div class="media">
                   <div class="pull-left">
                     <%= exhibit.media_html %>

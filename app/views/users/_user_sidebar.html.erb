@@ -10,7 +10,14 @@
           <ul>
               <li><a href="#">Overview</a></li>
               <li><a href="#">My Recent Activity</a></li>
-              <li><a href="#">My Investigations</a></li>
+              <li>
+                <a href="<%= following_user_path(@user) %>">
+                  My Investigations
+                  <strong id="following" class="stat">
+                    (<%= @user.followed_investigations.count %>)
+                  </strong>
+                </a>
+              </li>
               <li><a href="#">Theories</a></li>
               <li><a href="#">Cross Examinations</a></li>
               <li><a href="#">My Evidence</a></li>
