@@ -53,6 +53,11 @@
 #aboutus .flex-control-nav{
 	bottom: -30px;
 }
+
+#aboutus .container .section_header.cover_art .whitetitle {
+	float: left;
+}
+
 #aboutus .container .section_header.cover_art h3 {
 	background: url('/assets/transbg-white.jpg') repeat;
 	padding: 20px 20px 10px 0px;
@@ -60,6 +65,20 @@
 	margin-bottom: 5px;
 	font-size: 40px;
 }
+
+#aboutus .container .section_header.cover_art .follow-button {
+	float: left;
+	margin-top: 160px;
+}
+
+#aboutus .container .section_header.cover_art .follow-button .btn {
+	padding: 24px 5px;
+	-moz-border-radius: 0px 5px 5px 0px;
+	-webkit-border-radius: 0px 5px 5px 0px;
+	border-radius: 0px 5px 5px 0px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
 #aboutus .container .section_header.cover_art .stats {
 	margin-bottom: 5px;
 }

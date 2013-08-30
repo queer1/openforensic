@@ -10,9 +10,13 @@
               <h3><%= @investigation.title %></h3>
               <%= render 'shared/investigationstats' %>
             </div>
+            <div class="follow-button">
               <%= render 'follow_form' if signed_in? %>
-              <%= link_to "Add a Person of Interest", new_investigation_player_path(@investigation.id), :class => "btn btn-info" %> <%= link_to "Submit Evidence", new_investigation_exhibit_path(@investigation.id), :class => "btn btn-info" %>
+            </div>
           </div>
+          
+          <%= link_to "Add a Person of Interest", new_investigation_player_path(@investigation.id), :class => "btn btn-info" %> <%= link_to "Submit Evidence", new_investigation_exhibit_path(@investigation.id), :class => "btn btn-info" %>
+          
           <div class="row-fluid">
               <div class="span6 intro">
                   <h6>Investigation Wiki</h6>
@@ -54,12 +58,13 @@
                 
                   <div class="span3 bio_box">
 
+                    <%= link_to investigation_player_path(@investigation, player) do %>
                       <%= image_tag player.playerimage_url.to_s, :class => :player %>
                       <div class="info">
                           <p class="name"><%= player.name %></p>
                           <p class="area">Suspect</p>
                       </div>
-                    
+                    <% end %>
 
                   </div>
                   
@@ -81,7 +86,7 @@
               <h3>Recently Submitted Evidence</h3>
           </div>
 
-            <% @investigation.exhibits.each do |exhibit| %>
+            <% @investigation.exhibits.first(3).each do |exhibit| %>
             
             <div class="row-fluid services_circles">
             
@@ -93,7 +98,6 @@
                   <div class="media-body">
                     <h4 class="media-heading"><%= exhibit.name %></h4>
                     <p><%= exhibit.content %></p>
-
                   </div>
                 </div>
               <% end %>

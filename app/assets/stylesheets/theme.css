@@ -35,7 +35,7 @@ header {
     transition: margin .2s ease-in-out;
 }
 .navbar.navbar-inverse .navbar-inner {  
-    padding: 10px 0px 10px 0px;
+    padding: 4px 0px 0px 0px;
     background: #252528;    
 }
 .navbar.navbar-inverse .navbar-inner.sticky {

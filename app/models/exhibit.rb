@@ -1,5 +1,5 @@
 class Exhibit < ActiveRecord::Base  
-  attr_accessible :content, :investigation_id, :name, :user_id, :media, :media_html
+  attr_accessible :content, :investigation_id, :name, :user_id, :media, :media_html, :category_ids
   belongs_to :investigation
   
   has_many :categorizations

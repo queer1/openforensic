@@ -9,12 +9,23 @@
     
       <%= f.label :Name %>
       <%= f.text_field :name %>
-
+    
       <%= f.label :Background %>
       <%= f.text_area :content %>
       
       <%= f.label :Media %>
       <%= f.text_field :media %>
+      
+      <div class="categories">
+      <%= f.label :Category %>
+        <% Category.all.each do |category| %>
+        <div class="category">
+          <%= check_box_tag "exhibit[category_ids][]", category.id %>
+          <%= category.name %>
+        </div>
+        <% end %>
+      </div>
+      <br clear="all">
 
       <%= f.submit "Add this Evidence", class: "btn btn-large btn-info" %>
     <% end %>
