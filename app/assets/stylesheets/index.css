@@ -194,7 +194,7 @@
     display: block;
     position: absolute;
     top: 250px;
-    left: 15px;
+    left: 0px;
     background: url(leftright-arrows.png) no-repeat;
     opacity: .5;
     -webkit-transition: opacity .1s linear;

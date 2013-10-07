@@ -16,8 +16,12 @@ class InvestigationsController < ApplicationController
   def create
     @investigation = Investigation.new(params[:investigation])
     if @investigation.save
-      flash[:success] = "You've successfully created an Investigation..."
-      redirect_to @investigation
+      if params[:investigation][:investigationimage].present?
+        render :crop
+      else
+        flash[:success] = "You've successfully created an Investigation..."
+        redirect_to @investigation
+      end
     else
       render 'new'
     end

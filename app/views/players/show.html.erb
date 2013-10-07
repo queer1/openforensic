@@ -1,3 +1,5 @@
 <% provide(:title, 'New Person of Interest') %>
 <h1>THIS IS A PERSON OF INTEREST PROFILE</h1>
-<%= image_tag @player.playerimage_url.to_s %>
+<%= image_tag @player.playerimage_url(:thumb).to_s %>
+<%= image_tag @player.playerimage_url(:profile).to_s %>
+<%= image_tag @player.playerimage_url(:search).to_s %>

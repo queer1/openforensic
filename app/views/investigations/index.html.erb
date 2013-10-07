@@ -1,19 +1,61 @@
 <% provide(:title, 'Search Investigations') %>
 
 <div class="row-fluid">
-  <h3>Investigations</h3>
+  <div id="aboutus">
+    <div class="container">
+      <div class="padd" style="padding:30px 10px 10px 10px">
+        <div class="section_header">
+          
+          <div class="row-fluid">
+          <h3>Find Investigations</h3><br/>
+          <a href="#" class="btn btn-info" style="margin-top: 5px;"><i class="icon-plus icon-white"></i> Start an Investigation</a>
+            <form class="primary-search span6 pull-right">
+              <input type="text" class="span10 pull-left" name="fname" placeholder="search investigations">
+              <input type="submit" class="span2 btn btn btn-info pull-right">
+            </form>
+          </div>
+          
+          <div class="row-fluid">
+            <!--
+            <div class="span3">
+              <select name="investigationfilter" form="investigationfilter">
+                <option value="popular">Most Popular</option>
+                <option value="recent">Recently Created</option>
+                <option value="opel">Tending Now</option>
+                <option value="audi">Past Investigations</option>
+              </select>
+            </div>
+            -->
+            <div class="span6 pull-right">
+            Show: <%= link_to "Trending Now", :class => "span3 btn btn-info" %> | <%= link_to "Recently Created", :class => "span3 btn btn-info" %> | <%= link_to "Most Popular", :class => "btn btn-info" %>      
+            </div>
+            
+          </div>
+          
+        </div>
     
-    <ul class="investigations">
-      <% @investigations.each do |investigation| %>
-      <li>
-        
-        <%= link_to (image_tag investigation.investigationimage_url.to_s), investigation %>
-        <%= link_to investigation.title, investigation %>
-        
-      </li>
-      <% end %>
+        <ul class="investigations">
+          <% @investigations.each do |investigation| %>
+          <li>
+            <div class="row-fluid">
+              <div class="span3">
+                <%= link_to (image_tag investigation.investigationimage_url(:search).to_s), investigation %>
+              </div>
+              <div class="span9">
+                <%= link_to investigation.title, investigation %><br/>
+                <%=h truncate(investigation.content, :length => 300) %><br/>
+                <div class="pull-right">
+                <%= link_to "View Profile", :class => "span3 btn btn-info" %> | <%= link_to "View the Evidence Room", :class => "span3 btn btn-info" %> | <%= link_to "View Persons of Interest", :class => "btn btn-info" %> 
+                </div>
+              </div>
+            </div>      
+          </li>
+          <% end %>
       
-    </ul>
+        </ul>
     
-    <%= will_paginate @investigations %>
+        <%= will_paginate @investigations %>
+      </div>
+    </div>
+  </div>
 </div>

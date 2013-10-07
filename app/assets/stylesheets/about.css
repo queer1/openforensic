@@ -1,3 +1,19 @@
+/* --------- MISC ----------- */
+
+.text_area {
+	height: 100px;
+}
+
+.container .row-fluid.services_circles .media {
+	margin-top: 0px;
+}
+
+.container .row-fluid.services_circles .media .pull-left img {
+	margin-right: 10px;
+}
+
+/* -------- INVESTIGAITON PROFILES ---------- */
+
 #aboutus{
 	margin-bottom: 20px;
 	/* margin-top: 70px; */
@@ -15,6 +31,7 @@
 	-moz-box-shadow: 0px 0px 2px #646464;
 	-webkit-box-shadow: 0px 0px 2px #646464;
 	box-shadow: 0px 0px 2px #646464;
+	margin-bottom: 10px;
 }
 #aboutus .intro h6{
 	font-size: 21px;
@@ -279,4 +296,40 @@
 	-moz-box-shadow: 0px 0px 2px #646464;
 	-webkit-box-shadow: 0px 0px 2px #646464;
 	box-shadow: 0px 0px 2px #646464;
+	width: 150px;
+	height: auto;
+}
+
+#process .container .row-fluid.services_circles .media iframe {
+	-moz-box-shadow: 0px 0px 2px #646464;
+	-webkit-box-shadow: 0px 0px 2px #646464;
+	box-shadow: 0px 0px 2px #646464;
+	width: 150px;
+	height: auto;
+}
+
+#process .container .row-fluid.services_circles .media .pull-left p {
+	margin-bottom: 0px;
+}
+
+/* -------- INVESTIGATION INDEX ---------- */
+
+#aboutus .container .padd ul {
+	margin: 0px;
+}
+
+#aboutus .container .padd ul li {
+	list-style-type: none;
+	margin-bottom: 15px;
+}
+
+#aboutus .container .padd ul li a img {
+	-moz-box-shadow: 0px 0px 2px #646464;
+	-webkit-box-shadow: 0px 0px 2px #646464;
+	box-shadow: 0px 0px 2px #646464;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+}
+
+.primary-search {
+	margin-bottom: 0px;
 }

@@ -23,7 +23,7 @@
                 <% @investigations.each do |investigation| %>
                   <div class="post_content">
                   <h2><%= link_to investigation.title, investigation %></h2>
-                  <p><%= investigation.content %><span class="date">Wed, 12 Dec.</span></p>
+                  <p><%=h truncate(investigation.content, :length => 150) %><span class="date">Wed, 12 Dec.</span></p>
                   <a href="#">View Case Profile</a> | <a href="#">Submit Evidence</a>
                   </div>
                 <% end %>

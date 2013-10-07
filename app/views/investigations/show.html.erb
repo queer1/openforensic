@@ -4,7 +4,7 @@
   
   <div id="aboutus">
       <div class="container">
-        <div class="padd" style="padding: 0px 0px 20px 10px">
+        <div class="padd" style="padding: 0px 0px 10px 10px">
           <div class="section_header cover_art">
             <div class="whitetitle">
               <h3><%= @investigation.title %></h3>
@@ -15,8 +15,9 @@
             </div>
           </div>
           
-          <%= link_to "Add a Person of Interest", new_investigation_player_path(@investigation.id), :class => "btn btn-info" %> <%= link_to "Submit Evidence", new_investigation_exhibit_path(@investigation.id), :class => "btn btn-info" %>
+          <%= link_to "Add a Person of Interest", new_investigation_player_path(@investigation.id), :class => "btn btn-info" %> <%= link_to "Submit Evidence", new_investigation_exhibit_path(@investigation.id), :class => "btn btn-info" %> <%= link_to "Post a Theory", :class => "btn btn-info" %>
           
+          <!--
           <div class="row-fluid">
               <div class="span6 intro">
                   <h6>Investigation Wiki</h6>
@@ -30,17 +31,19 @@
                       <li>
                         <%= image_tag @investigation.investigationimage_url.to_s %>
                       </li>
-                      <!--
+                      
                       <li>
                         <%= image_tag @investigation.investigationimage_url.to_s %>
                       </li>
                       <li>
                         <%= image_tag @investigation.investigationimage_url.to_s %>
                       </li>
-                      -->
+                      
                     </ul>
               </div>
           </div>
+          -->
+          
         </div>
       </div>
   </div>
@@ -59,7 +62,7 @@
                   <div class="span3 bio_box">
 
                     <%= link_to investigation_player_path(@investigation, player) do %>
-                      <%= image_tag player.playerimage_url.to_s, :class => :player %>
+                      <%= image_tag player.playerimage_url(:search).to_s, :class => :player %>
                       <div class="info">
                           <p class="name"><%= player.name %></p>
                           <p class="area">Suspect</p>
@@ -96,11 +99,19 @@
                     <%= exhibit.media_html %>
                   </div>
                   <div class="media-body">
-                    <h4 class="media-heading"><%= exhibit.name %></h4>
-                    <p><%= exhibit.content %></p>
+                    <div class="row-fluid">
+                      <div class="span10">
+                        <h4 class="media-heading"><%= exhibit.name %></h4>
+                        <p><%= exhibit.content %></p>
+                      </div>
+              <% end %>
+                      <div class="span2">
+                        upvote
+                      </div>
+                    </div>
                   </div>
                 </div>
-              <% end %>
+      
               
             </div>
             
@@ -139,40 +150,13 @@
               </div>
             </div>          
           </div>
-          <div class="row-fluid services_circles">
-            
-            <div class="media">
-              <a class="pull-left" href="#">
-                <%= image_tag("marathon.jpg", :class => "media-object", :width => 100) %>
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Suspect Photo Street View</h4>
-                <p>
-                    There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
-
-              </div>
-            </div>          
-          </div>
-          <div class="row-fluid services_circles">
-            
-            <div class="media">
-              <a class="pull-left" href="#">
-                <%= image_tag("marathon.jpg", :class => "media-object", :width => 100) %>
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Suspect Photo Street View</h4>
-                <p>
-                    There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
-
-              </div>
-            </div>          
-          </div>
-          
+  
       </div>
   </div>
   
   <br clear="all">
   
+  <!--
   <div id="process">
       <div class="container">
           <div class="section_header">
@@ -215,5 +199,6 @@
           </div>
       </div>
   </div>
+  -->
   
 </div><!-- end Row -->

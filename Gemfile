@@ -6,6 +6,7 @@ gem 'bcrypt-ruby'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
+gem "rmagick"
 gem 'carrierwave'
 gem 'auto_html'
 

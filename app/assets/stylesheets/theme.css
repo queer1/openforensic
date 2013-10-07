@@ -89,7 +89,7 @@ header {
 
 .section_header {
 	width: 100%;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 .section_header h3 {
 	color: rgb(100, 100, 100);
@@ -103,12 +103,12 @@ header {
 }
 
 img.player {
-	-moz-border-radius: 75px;
-	-webkit-border-radius: 75px;
-	border-radius: 75px;
-	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
 	width: auto;
-	height: 100px;
+	height: 100%;
+	-moz-box-shadow: 0px 0px 10px #000000;
+	-webkit-box-shadow: 0px 0px 10px #000000;
+	box-shadow: 0px 0px 10px #000000;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
 }
 
 /* Footer
