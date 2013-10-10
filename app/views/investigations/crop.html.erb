@@ -8,6 +8,15 @@
           </div><br/>
           <div class="row-fluid">
             <%= image_tag @investigation.investigationimage_url, id: "cropbox" %>
+            
+            <%= form_for @investigation do |f| %>
+              <% %w[x y w h].each do |attribute| %>
+                <%= f.hidden_field "crop_#{attribute}" %>
+              <% end %><br clear="all">
+              <div class="actions">
+                <%= f.submit "Crop" %>
+              </div>
+            <% end %>
           </div>
           
         </div>

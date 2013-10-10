@@ -5,7 +5,7 @@
   <div id="aboutus">
       <div class="container">
         <div class="padd" style="padding: 0px 0px 10px 10px">
-          <div class="section_header cover_art">
+          <div class="section_header cover_art" style="background: url('<%= @investigation.investigationimage_url(:large).to_s %>') no-repeat;">
             <div class="whitetitle">
               <h3><%= @investigation.title %></h3>
               <%= render 'shared/investigationstats' %>

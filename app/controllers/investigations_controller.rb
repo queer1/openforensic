@@ -34,8 +34,12 @@ class InvestigationsController < ApplicationController
   def update
     @investigation = Investigation.find(params[:id])
     if @investigation.update_attributes(params[:investigation])
-      flash[:success] = "Investigation updated"
-      redirect_to @user
+      if params[:investigation][:investigationimage].present?
+        render :crop
+      else
+        flash[:success] = "Investigation updated"
+        redirect_to @investigation
+      end
     else
       render 'edit'
     end
