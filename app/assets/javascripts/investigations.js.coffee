@@ -7,9 +7,11 @@ jQuery ->
 class InvestigationImageCropper
   constructor: ->
     $('#cropbox').Jcrop
-      aspectRatio: 24/9
-      setSelect: [0,0,1400,300]
-      onSelect: @update
+      aspectRatio: 97/30,
+      setSelect: [0,0,970,300],
+      bgColor: 'black',
+      bgOpacity: .5,
+      onSelect: @update,
       onChange: @update
       
   update: (coords) =>

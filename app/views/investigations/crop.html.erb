@@ -7,7 +7,7 @@
             <h3>Crop Investigation Cover Image</h3>
           </div><br/>
           <div class="row-fluid">
-            <%= image_tag @investigation.investigationimage_url, id: "cropbox" %>
+            <%= image_tag @investigation.investigationimage_url(:profile), id: "cropbox" %>
             
             <%= form_for @investigation do |f| %>
               <% %w[x y w h].each do |attribute| %>
@@ -18,7 +18,7 @@
               </div>
             <% end %>
           </div>
-          
+
         </div>
       </div>
     </div>

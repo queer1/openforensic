@@ -32,28 +32,26 @@ class InvestigationimageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process :scale => [50, 50]
-  # end
   version :thumb do
     process :resize_to_limit => [100, 100]
   end
   
   version :profile do
-    process :resize_to_limit => [200, 200]
+    process :resize_to_limit => [970, nil]
   end
   
   version :search do
     process :resize_to_limit => [200, 150]
   end
   
-  version :large do
+  version :cover do
     process :crop
-    resize_to_fill => [1400, 300]
+    resize_to_fill(970, 300)
   end
   
   def crop
     if model.crop_x.present?
+      resize_to_limit(970, nil)
       manipulate! do |img|
         x = model.crop_x.to_i
         y = model.crop_y.to_i

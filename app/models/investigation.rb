@@ -11,7 +11,7 @@ class Investigation < ActiveRecord::Base
   validates :title, presence: true, length: { maximum: 140 }
   validates :content, presence: true
   validates :investigationimage, presence: true
-  mount_uploader :investigationimage, ImageUploader
+  mount_uploader :investigationimage, InvestigationimageUploader
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   after_update :crop_investigationimage
   

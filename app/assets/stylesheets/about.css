@@ -12,6 +12,10 @@
 	margin-right: 10px;
 }
 
+#aboutus .container .padd .pagination {
+	margin: 40px 0px 0px 0px;
+}
+
 /* -------- INVESTIGAITON PROFILES ---------- */
 
 #aboutus{
@@ -88,7 +92,7 @@
 }
 
 #aboutus .container .section_header.cover_art .follow-button .btn {
-	padding: 24px 5px;
+	padding: 24px 5px 25px 5px;
 	-moz-border-radius: 0px 5px 5px 0px;
 	-webkit-border-radius: 0px 5px 5px 0px;
 	border-radius: 0px 5px 5px 0px;

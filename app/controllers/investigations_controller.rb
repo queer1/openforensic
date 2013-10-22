@@ -37,7 +37,7 @@ class InvestigationsController < ApplicationController
       if params[:investigation][:investigationimage].present?
         render :crop
       else
-        flash[:success] = "Investigation updated"
+        flash[:success] = "Investigation Created"
         redirect_to @investigation
       end
     else
@@ -56,6 +56,6 @@ class InvestigationsController < ApplicationController
       @investigation = Investigation.find(params[:id])
       @investigations = @investigation.followers.paginate(page: params[:page])
       render 'show_follow_investigation'
-    end
+  end
   
 end

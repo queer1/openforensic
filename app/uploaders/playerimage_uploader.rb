@@ -37,7 +37,7 @@ class PlayerimageUploader < CarrierWave::Uploader::Base
   end
   
   version :profile do
-    process :resize_to_limit => [200, 200]
+    process :resize_to_limit => [1400, 300]
   end
   
   version :search do
